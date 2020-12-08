@@ -66,9 +66,9 @@ public class DataFilm {
     }
 
     private Film createFilmFromData(String data) {
-        String[] datas = data.split("|");
+        String[] datas = data.split("\\|");
         Film film = new Film(Integer.parseInt(datas[0]), datas[1], datas[2], datas[3], datas[4], datas[5], Integer.parseInt(datas[6]),
-                datas[7], Integer.parseInt(datas[8]), datas[9]);
+                datas[7], Long.parseLong(datas[8]), datas[9]);
         return film;
     }
 }

@@ -8,7 +8,7 @@ public class RunMain {
     static Scanner sc = new Scanner(System.in);
     static DataCustomer dataCustomer = new DataCustomer();
     static DataFilm dataFilm = new DataFilm();
-    static String filmFilmName = "FILM.DAT";
+    static String filmFileName = "FILM.DAT";
     static String ctmFileName = "CUSTOMER.DAT";
     public static void menuMain(List<Film> list){
         do{
@@ -38,7 +38,8 @@ public class RunMain {
             System.out.println("You want: ");
             System.out.println("1.Search Film");
             System.out.println("2.Choice Film");
-            System.out.println("3.Exit");
+            System.out.println("3.Show Film");
+            System.out.println("4.Exit");
             int n2 = sc.nextInt();
             switch(n2){
                 case 2:{
@@ -49,6 +50,9 @@ public class RunMain {
                     break;
                 }
                 case 3:{
+                    break;
+                }
+                case 4:{
                     return;
                 }
                 default:{
@@ -58,6 +62,7 @@ public class RunMain {
             }
         } while(true);
     }
+    
     public static void Bill(Customer ctm, Film film){
         double sum = 0;
         for(int i = 0; i < ctm.getIdAccount().length(); i++){

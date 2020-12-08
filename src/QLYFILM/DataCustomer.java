@@ -65,7 +65,7 @@ public class DataCustomer {
     }
 
     private Customer createCustomerFromData(String data) {
-        String[] datas = data.split("|");
+        String[] datas = data.split("\\|");
         Customer customer = new Customer(datas[0], Integer.parseInt(datas[1]), datas[2], datas[3], datas[4]);
         return customer;
     }
