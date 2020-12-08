@@ -32,6 +32,8 @@ public class Customer extends Person{
     }
 
     public void InputCustomer(){
+        Person ps = new Person();
+        ps.InputPerson();
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhập id tài khoản: ");
         idAccount = sc.nextLine();
